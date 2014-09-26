@@ -1,0 +1,131 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file alias="rkbox">qss/rkbox.qss</file>
+    </qresource>
+    <qresource prefix="/skin">
+        <file alias="0_big">skin/0_big.png</file>
+        <file alias="5_big">skin/5_big.png</file>
+        <file alias="5">skin/5.png</file>
+        <file alias="0">skin/0.png</file>
+        <file alias="24_big">skin/24_big.jpg</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file alias="tool">icon/tool.png</file>
+        <file alias="logo">icon/logo.png</file>
+        <file alias="link_on">icon/link_on.png</file>
+        <file alias="link_off">icon/link_off.png</file>
+        <file alias="menu_setting">icon/menu_setting.png</file>
+        <file alias="menu_about_us">icon/menu_about_us.png</file>
+        <file alias="menu_check_update">icon/menu_check_update.png</file>
+        <file alias="menu_know_more">icon/menu_know_more.png</file>
+        <file alias="warning">icon/warning.png</file>
+        <file alias="error">icon/error.png</file>
+        <file alias="AppIcon">icon/AppIcon.png</file>
+    </qresource>
+    <qresource prefix="/qm">
+        <file>RkBoxTr_Zh.qm</file>
+    </qresource>
+    <qresource prefix="/tool_button">
+        <file alias="search">tool_button/search.png</file>
+        <file alias="main">tool_button/main.png</file>
+        <file alias="link_management">tool_button/link_management.png</file>
+        <file alias="setting">tool_button/setting.png</file>
+        <file alias="export">tool_button/export.png</file>
+        <file alias="history">tool_button/history.png</file>
+        <file alias="real_data">tool_button/real_data.png</file>
+    </qresource>
+    <qresource prefix="/login">
+        <file alias="1">login/1.png</file>
+        <file alias="2">login/2.png</file>
+        <file alias="3">login/3.png</file>
+        <file alias="4">login/4.png</file>
+        <file alias="5">login/5.png</file>
+        <file alias="6">login/6.png</file>
+        <file alias="7">login/7.png</file>
+        <file alias="8">login/8.png</file>
+    </qresource>
+    <qresource prefix="/flag">
+        <file alias="flag_white">flag/flag_white.png</file>
+        <file alias="flag_blue">flag/flag_blue.png</file>
+        <file alias="flag_green">flag/flag_green.png</file>
+        <file alias="flag_red">flag/flag_red.png</file>
+    </qresource>
+    <qresource prefix="/title_button">
+        <file alias="close">title_button/close.png</file>
+        <file alias="close_hover">title_button/close_hover.png</file>
+        <file alias="close_pressed">title_button/close_pressed.png</file>
+        <file alias="min">title_button/min.png</file>
+        <file alias="min_hover">title_button/min_hover.png</file>
+        <file alias="min_pressed">title_button/min_pressed.png</file>
+        <file alias="setting">title_button/setting.png</file>
+        <file alias="setting_hover">title_button/setting_hover.png</file>
+        <file alias="setting_pressed">title_button/setting_pressed.png</file>
+        <file alias="skin">title_button/skin.png</file>
+        <file alias="skin_hover">title_button/skin_hover.png</file>
+        <file alias="skin_pressed">title_button/skin_pressed.png</file>
+        <file alias="menu">title_button/menu.png</file>
+        <file alias="menu_hover">title_button/menu_hover.png</file>
+        <file alias="menu_pressed">title_button/menu_pressed.png</file>
+        <file alias="feedback">title_button/feedback.png</file>
+        <file alias="feedback_hover">title_button/feedback_hover.png</file>
+        <file alias="feedback_pressed">title_button/feedback_pressed.png</file>
+        <file alias="medal">title_button/medal.png</file>
+        <file alias="medal_hover">title_button/medal_hover.png</file>
+        <file alias="medal_pressed">title_button/medal_pressed.png</file>
+    </qresource>
+    <qresource prefix="/switch_button">
+        <file alias="bg">switch_button/bg.png</file>
+        <file alias="fg_off">switch_button/fg_off.png</file>
+        <file alias="fg_on">switch_button/fg_on.png</file>
+        <file alias="switcher_off">switch_button/switcher_off.png</file>
+        <file alias="switcher_on">switch_button/switcher_on.png</file>
+    </qresource>
+    <qresource prefix="/tab_icon">
+        <file alias="1">tab_icon/1.png</file>
+        <file alias="2">tab_icon/2.png</file>
+        <file alias="3">tab_icon/3.png</file>
+        <file alias="4">tab_icon/4.png</file>
+        <file alias="5">tab_icon/5.png</file>
+        <file alias="6">tab_icon/6.png</file>
+        <file alias="7">tab_icon/7.png</file>
+        <file alias="8">tab_icon/8.png</file>
+    </qresource>
+    <qresource prefix="/check_box">
+        <file alias="box_normal">check_box/box-normal.png</file>
+        <file alias="box_checked">check_box/box-checked.png</file>
+        <file alias="box_highlight">check_box/box-highlight.png</file>
+        <file alias="box_checked_highlight">check_box/box-checked-highlight.png</file>
+    </qresource>
+    <qresource prefix="/app">
+        <file alias="AppIcon">icon/AppIcon.ico</file>
+    </qresource>
+    <qresource prefix="/message_box">
+        <file alias="error">message_box/error.png</file>
+        <file alias="information">message_box/information.png</file>
+        <file alias="warning">message_box/warning.png</file>
+    </qresource>
+    <qresource prefix="/dock">
+        <file alias="update">dock/update.png</file>
+        <file alias="dock_bar">dock/dock_bar.png</file>
+        <file alias="monitor">dock/monitor.png</file>
+        <file alias="setting">dock/setting.png</file>
+        <file alias="debug">dock/debug.png</file>
+        <file alias="record">dock/record.png</file>
+    </qresource>
+    <qresource prefix="/firmware_upgrade_dialog">
+        <file alias="upgrade">firmware_upgrade_dialog/upgrade.png</file>
+    </qresource>
+    <qresource prefix="/main_page">
+        <file alias="grass_background">main_page/grass_background.png</file>
+        <file alias="product_pic">main_page/product_pic.png</file>
+        <file alias="global">main_page/global.png</file>
+        <file alias="platform">main_page/platform.png</file>
+        <file alias="cloud">main_page/cloud.png</file>
+    </qresource>
+    <qresource prefix="/code_editor">
+        <file alias="list_down">code_editor/list_down.png</file>
+    </qresource>
+    <qresource prefix="/round_button">
+        <file alias="round_button">round_button/round_button.png</file>
+    </qresource>
+</RCC>
