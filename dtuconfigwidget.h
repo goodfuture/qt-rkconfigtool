@@ -16,6 +16,7 @@ public:
     explicit DtuConfigWidget(QWidget *parent = 0);
 
 signals:
+	void	configChanged();
 
 public slots:
     void	onLogin();

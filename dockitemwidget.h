@@ -22,7 +22,7 @@ class DockItemWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit DockItemWidget(QWidget *parent = 0, QPixmap &icon = QPixmap(), QString &tip = QString());
+    explicit DockItemWidget(QWidget *parent, QPixmap &icon, QString &tip);
     ~DockItemWidget();
 
 public:

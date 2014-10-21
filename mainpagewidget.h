@@ -39,7 +39,7 @@ public:
     ~MainPageWidget(){}
     void	translate();
     void	initWidgets();
-    void	setBackgroundPixmap(QPixmap &);
+    void	setBackgroundPixmap(QPixmap);
 
 signals:
     void userRequest(int);

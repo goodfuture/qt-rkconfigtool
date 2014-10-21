@@ -89,15 +89,27 @@ bool ModelNetConfig::setData(const QModelIndex &index, const QVariant &value, in
     }
     case 1:
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_tNetParam.m_aDeviceIpAddr, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_tNetParam.m_aDeviceIpAddr, "%s", byteArray.data());
+#endif
         return true;
     case 2:
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_tNetParam.m_aDeviceNetMask, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_tNetParam.m_aDeviceNetMask, "%s", byteArray.data());
+#endif
         return true;
     case 3:
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_tNetParam.m_aRemoteIpAddr, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_tNetParam.m_aRemoteIpAddr, "%s", byteArray.data());
+#endif
         return true;
     case 4:
         string = value.toString();

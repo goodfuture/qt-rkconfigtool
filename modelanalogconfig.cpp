@@ -102,7 +102,11 @@ bool ModelAnalogConfig::setData(const QModelIndex &index, const QVariant &value,
                 return false;
             }
         }
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_aAnalogParam[row].m_aCode, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_aAnalogParam[row].m_aCode, "%s", byteArray.data());
+#endif
     } else if (col == 4) {
         string = value.toString();
         double upperLimitValue = string.toDouble();
@@ -159,7 +163,11 @@ bool ModelAnalogConfig::setData(const QModelIndex &index, const QVariant &value,
         g_tContext.m_tParamConfig.m_aAnalogParam[row].m_fLowerThresholdValue = string.toFloat();
     } else if (col == 9) {
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_aAnalogParam[row].m_aFormula , "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_aAnalogParam[row].m_aFormula , "%s", byteArray.data());
+#endif
     }
 
     return true;

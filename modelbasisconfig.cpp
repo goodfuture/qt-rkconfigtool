@@ -133,11 +133,18 @@ bool ModelBasisConfig::setData(const QModelIndex &index, const QVariant &value, 
     switch(row) {
     case 0:
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_tSysParam.m_aSim, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_tSysParam.m_aSim, "%s", byteArray.data());
+#endif
         return true;
     case 1:
         byteArray = value.toByteArray();
-        sprintf_s(g_tContext.m_tParamConfig.m_tSysParam.m_aMn, "%s", byteArray.data());
+#ifdef WIN32
+        sprintf(g_tContext.m_tParamConfig.m_tSysParam.m_aMn, "%s", byteArray.data());
+#else
+#endif
         return true;
     case 2: {
         int sys_type_index = sys_type_list.indexOf(value.toString());

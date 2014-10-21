@@ -367,7 +367,7 @@ bool rkPushComConfigTlvsToMsg(rkMsgPkt_t &pkt)
     bool ret;
     static int id = 0, pos = 0;
 
-    for (id; id < COM_485_PORT_NUMBER; id++) {
+    for (; id < COM_485_PORT_NUMBER; id++) {
         QString string;
         string.sprintf("baud=%d,databit=%d,stopbit=%d,parity=%d",
                        g_tContext.m_tParamConfig.m_aComParam[id].m_nBaud,
@@ -447,7 +447,7 @@ bool rkPushAnalogConfigTlvsToMsg(rkMsgPkt_t &pkt)
     static int id = 0;
     bool ret;
 
-    for (id; id < ANALOG_CHANNEL_TOTAL_NUMBER; id++) {
+    for (; id < ANALOG_CHANNEL_TOTAL_NUMBER; id++) {
         QString string;
         string.sprintf("inuse=%d,type=%d,code=%s,ulv=%f,llv=%f,utv=%f,ltv=%f,convert=%d,formula=%s",
                        g_tContext.m_tParamConfig.m_aAnalogParam[id].m_bInuse,
@@ -475,7 +475,7 @@ bool rkPushSerialConfigTlvsToMsg(rkMsgPkt_t &pkt)
     static int id = 0;
     bool ret;
 
-    for (id; id < SERIAL_CHANNEL_TOTAL_NUMBER; id++) {
+    for (; id < SERIAL_CHANNEL_TOTAL_NUMBER; id++) {
         QString string;
         string.sprintf("inuse=%d,code=%s,com=%d,type=%d,devaddr=%d,regaddr=%d,ulv=%f,llv=%f,utv=%f,ltv=%f,convert=%d,formula=%s",
                        g_tContext.m_tParamConfig.m_aSerialParam[id].m_bInuse,
@@ -508,7 +508,7 @@ bool rkPushDioConfigTlvsToMsg(rkMsgPkt_t &pkt)
 
     switch(pos) {
     case 0:
-        for (id; id < DIGITAL_INPUT_PORT_NUMBER; id++) {
+        for (; id < DIGITAL_INPUT_PORT_NUMBER; id++) {
             QString string;
             string.sprintf("inuse=%d,code=%s",
                            g_tContext.m_tParamConfig.m_aDiParam[id].m_bInuse,
@@ -522,7 +522,7 @@ bool rkPushDioConfigTlvsToMsg(rkMsgPkt_t &pkt)
         pos = 1;
         id = 0;
     case 1:
-        for (id; id < DIGITAL_OUTPUT_PORT_NUMBER; id++) {
+        for (; id < DIGITAL_OUTPUT_PORT_NUMBER; id++) {
             QString string;
             string.sprintf("inuse=%d,code=%s,status=%d",
                            g_tContext.m_tParamConfig.m_aDoParam[id].m_bInuse,
@@ -636,7 +636,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp_ptr) {
                     memcpy(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aCode, ptr, tmp_ptr - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aCode, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aCode, ptr);
+#endif
                 }
             }
             ptr = strstr(buf, "ulv=");
@@ -666,7 +670,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp_ptr) {
                     memcpy(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aFormula, ptr, tmp_ptr - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aFormula, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aAnalogParam[index].m_aFormula, ptr);
+#endif
                 }
             }
             continue;
@@ -700,7 +708,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp_ptr) {
                     memcpy(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aCode, ptr, tmp_ptr - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aCode, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aCode, ptr);
+#endif
                 }
             }
             ptr = strstr(buf, "com=");
@@ -739,7 +751,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp_ptr) {
                     memcpy(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aFormula, ptr, tmp_ptr - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aFormula, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aSerialParam[index].m_aFormula, ptr);
+#endif
                 }
             }
             continue;
@@ -770,7 +786,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp_ptr) {
                     memcpy(g_tContext.m_tParamConfig.m_aDiParam[index].m_aCode, ptr, tmp_ptr - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aDiParam[index].m_aCode, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aDiParam[index].m_aCode, ptr);
+#endif
                 }
             }
             continue;
@@ -801,7 +821,11 @@ bool rkParseParamConfig(rkMsgPkt_t &pkt)
                 if (tmp) {
                     memcpy(g_tContext.m_tParamConfig.m_aDoParam[index].m_aCode, ptr, tmp - ptr);
                 } else {
+#ifdef WIN32
                     strcpy_s(g_tContext.m_tParamConfig.m_aDoParam[index].m_aCode, ptr);
+#else
+                    strcpy(g_tContext.m_tParamConfig.m_aDoParam[index].m_aCode, ptr);
+#endif
                 }
             }
 

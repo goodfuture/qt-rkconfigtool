@@ -169,12 +169,12 @@ void LoginDialog::showMsg(Util::DispMsgId id)
     }
 }
 
-void LoginDialog::showWarning(QString &warning)
+void LoginDialog::showWarning(QString warning)
 {
     prompt_widget->showTip(warning, QPixmap(":/icon/warning"));
 }
 
-void LoginDialog::showError(QString &error)
+void LoginDialog::showError(QString error)
 {
     prompt_widget->showTip(error, QPixmap(":/icon/error"));
 }

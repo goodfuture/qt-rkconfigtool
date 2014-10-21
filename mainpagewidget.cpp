@@ -117,7 +117,7 @@ void MainPageWidget::onMessageHandled(Util::MsgHandleFlag type, Util::MsgHandleR
     }
 }
 
-void MainPageWidget::setBackgroundPixmap(QPixmap &pixmap)
+void MainPageWidget::setBackgroundPixmap(QPixmap pixmap)
 {
     this->backgroundPixmap = pixmap;
 

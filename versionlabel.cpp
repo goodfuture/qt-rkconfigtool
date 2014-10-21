@@ -37,7 +37,7 @@ VersionLabel::VersionLabel(QWidget *parent) :
     //mainLayout->addWidget(dtuFirmwareVersion, 3, 2, Qt::AlignLeft);
 }
 
-void VersionLabel::setHmiVersion(QString &version)
+void VersionLabel::setHmiVersion(QString version)
 {
     if (version.isEmpty()) {
         hmiFirmwareVersion->setText(tr("Unknow"));
@@ -46,7 +46,7 @@ void VersionLabel::setHmiVersion(QString &version)
     }
 }
 
-void VersionLabel::setBlpVersion(QString &version)
+void VersionLabel::setBlpVersion(QString version)
 {
     if (version.isEmpty()) {
         blpFirmwareVersion->setText(tr("Unknow"));

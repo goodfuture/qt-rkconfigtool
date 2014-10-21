@@ -30,7 +30,7 @@ void CodeEditor::onClicked()
     qDebug() << "Clicked";
 }
 
-void CodeEditor::setText(QString &text)
+void CodeEditor::setText(QString text)
 {
     lineEdit->setText(text);
 }

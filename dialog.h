@@ -21,7 +21,7 @@ class Dialog : public DropShadowWidget
 {
     Q_OBJECT
 public:
-    explicit Dialog(QWidget *parent = 0, QPixmap &icon = QPixmap(), QString &title = QString());
+    explicit Dialog(QWidget *parent, QPixmap &icon, QString &title);
     ~Dialog(){}
     QVBoxLayout *getLayout();
 

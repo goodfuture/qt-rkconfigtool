@@ -19,7 +19,7 @@ class DockWidget : public QWidget
 public:
     explicit DockWidget(QWidget *parent = 0);
     ~DockWidget(){}
-    void addIcon(QPixmap &icon, QString &tip);
+    void addIcon(QPixmap icon, QString tip);
     void resize();
 
 signals:

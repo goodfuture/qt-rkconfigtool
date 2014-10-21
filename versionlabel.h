@@ -26,8 +26,8 @@ public:
 signals:
 
 public slots:
-    void	setHmiVersion(QString &);
-    void	setBlpVersion(QString &);
+    void	setHmiVersion(QString);
+    void	setBlpVersion(QString);
     //void 	setDtuVersion(QString &);
 
 private:

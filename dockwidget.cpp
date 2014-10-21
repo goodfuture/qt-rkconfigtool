@@ -21,7 +21,7 @@ void DockWidget::resize()
     //QWidget::resize();
 }
 
-void DockWidget::addIcon(QPixmap &icon, QString &tip)
+void DockWidget::addIcon(QPixmap icon, QString tip)
 {
     DockItemWidget *item = new DockItemWidget(this, icon, tip);
     dockItemList << item;

@@ -49,8 +49,8 @@ public slots:
     void login(QString &, QString &);
     void abortLogin();
     void showMsg(Util::DispMsgId);
-    void showError(QString &);
-    void showWarning(QString &);
+    void showError(QString);
+    void showWarning(QString);
     //void msgHandleRst(Util::MsgHandleFlag, Util::MsgHandleRst);
     void onLoginResult(int);
 

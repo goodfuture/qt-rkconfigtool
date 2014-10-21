@@ -23,7 +23,7 @@ signals:
 public slots:
     QString	text();
     void	onClicked();
-    void	setText(QString &);
+    void	setText(QString);
 
 protected:
     virtual void paintEvent(QPaintEvent *);

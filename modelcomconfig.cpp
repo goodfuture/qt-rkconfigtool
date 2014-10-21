@@ -116,7 +116,11 @@ bool ModelComConfig::setData(const QModelIndex &index, const QVariant &value, in
         g_tContext.m_tParamConfig.m_aComParam[row].m_uParity = parity;
     } else if (col == 5) {
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_aComParam[row].m_aProtocol, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_aComParam[row].m_aProtocol, "%s", byteArray.data());
+#endif
     }
 
     return true;

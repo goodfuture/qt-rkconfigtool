@@ -81,7 +81,11 @@ bool ModelDioConfig::setData(const QModelIndex &index, const QVariant &value, in
                     return false;
                 }
             }
+#ifdef WIN32
             sprintf_s(g_tContext.m_tParamConfig.m_aDiParam[row].m_aCode, "%s", byteArray.data());
+#else
+            sprintf(g_tContext.m_tParamConfig.m_aDiParam[row].m_aCode, "%s", byteArray.data());
+#endif
         } else {
             if (byteArray.isEmpty()) {
                 if (g_tContext.m_tParamConfig.m_aDoParam[row - DIGITAL_INPUT_PORT_NUMBER].m_bInuse) {
@@ -89,7 +93,11 @@ bool ModelDioConfig::setData(const QModelIndex &index, const QVariant &value, in
                     return false;
                 }
             }
+#ifdef WIN32
             sprintf_s(g_tContext.m_tParamConfig.m_aDoParam[row - DIGITAL_INPUT_PORT_NUMBER].m_aCode, "%s", byteArray.data());
+#else
+            sprintf(g_tContext.m_tParamConfig.m_aDoParam[row - DIGITAL_INPUT_PORT_NUMBER].m_aCode, "%s", byteArray.data());
+#endif
         }
     }
 

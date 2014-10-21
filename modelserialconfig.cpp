@@ -99,7 +99,11 @@ bool ModelSerialConfig::setData(const QModelIndex &index, const QVariant &value,
                 return false;
             }
         }
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_aSerialParam[row].m_aCode, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_aSerialParam[row].m_aCode, "%s", byteArray.data());
+#endif
     } else if (col == 3) {
         int sub_index = com_id_list.indexOf(value.toString());
         if (sub_index < 0) {
@@ -168,7 +172,11 @@ bool ModelSerialConfig::setData(const QModelIndex &index, const QVariant &value,
         g_tContext.m_tParamConfig.m_aSerialParam[row].m_fLowerThresholdValue = value.toFloat();
     } else if (col == 12) {
         byteArray = value.toByteArray();
+#ifdef WIN32
         sprintf_s(g_tContext.m_tParamConfig.m_aSerialParam[row].m_aFormula, "%s", byteArray.data());
+#else
+        sprintf(g_tContext.m_tParamConfig.m_aSerialParam[row].m_aFormula, "%s", byteArray.data());
+#endif
     }
 
     return true;
